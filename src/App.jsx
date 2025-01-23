@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import DeviceDropdown from "./components/DiviceDropdown";
 import Graph from "./components/Graph";
-import Footer from "./components/Footer"; // Importing the Footer component
 import './App.css'; // Import app-wide CSS for dark mode styling
 
 const App = () => {
@@ -26,8 +25,6 @@ const App = () => {
         <Graph metric="cls" device={device} darkMode={darkMode} />
       </div>
 
-      {/* Footer Component */}
-      <Footer />
     </div>
   );
 };
