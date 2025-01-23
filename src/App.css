@@ -6,6 +6,8 @@ html, body {
   height: 100vh;  /* Ensure full height */
   overflow: hidden;  /* Prevent scrolling */
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
 }
 
 body {
@@ -23,23 +25,26 @@ body {
   background-color: #f8f9fa;
   color: #000;
   position: fixed; /* Fix the navbar at the top */
-  top: 0; /* Align it to the top */
-  left: 0; /* Align it to the left */
-  right: 0; /* Align it to the right */
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000; /* Ensure it stays above other content */
+  height: 60px; /* Define a fixed height */
 }
 
 /* Content Styling */
 .content {
-  width: 100%;  /* Ensures content spans the full width */
-  height: calc(100vh - 60px); /* Adjust to fill the screen (considering navbar height) */
+  width: 100vw;  /* Ensures content spans the full width */
+  height: calc(100vh - 60px); /* Adjust dynamically according to navbar height */
   padding: 20px; /* Adds padding around content */
   box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
   text-align: center;
   margin: 0;
   overflow: auto; /* Allow scrolling if content overflows */
-  position: relative; /* Ensure it respects the navbar's position */
+  position: absolute; /* Ensures it stays below navbar */
   top: 60px; /* Push content down below the fixed navbar */
+  left: 0;
+  flex: 1;
 }
 
 /* Navbar Links */
@@ -97,6 +102,7 @@ body {
     padding: 10px 15px;
     flex-direction: column;
     align-items: flex-start;
+    height: auto;
   }
 
   .nav-links {
@@ -120,7 +126,7 @@ body {
   .content {
     padding: 10px;
     text-align: center;
-    top: 60px; /* Ensure content is below the navbar */
+    height: calc(100vh - 60px); /* Adjust height dynamically */
   }
 
   h1 {
@@ -149,11 +155,23 @@ body {
   /* Adjust Graph components to be full width */
   .content {
     padding: 5px;
-    top: 60px; /* Ensure content is below the navbar */
+    height: calc(100vh - 60px); /* Ensure full height */
   }
 
   .graph {
     width: 100%;
     margin-bottom: 10px;
   }
+}
+
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

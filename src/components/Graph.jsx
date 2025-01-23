@@ -52,17 +52,24 @@ const Graph = ({ metric, device, darkMode }) => {
         },
       },
     ],
-    backgroundColor: darkMode ? "#333" : "#fff", // Change the background color of the graph
+    backgroundColor: darkMode ? "#333" : "#fff",
     textStyle: {
-      color: darkMode ? "#fff" : "#000", // Change text color
+      color: darkMode ? "#fff" : "#000",
     },
   };
 
   return (
-    <div className={`graph-container ${darkMode ? 'dark-mode' : ''}`}>
-      <ReactECharts className="echarts-container" option={options} />
+    <div className="graph-wrapper">
+      <div className="graph-container">
+        <ReactECharts className="echarts-container" option={options} />
+      </div>
+      {/* <div className="graph-container"> */}
+        {/* <ReactECharts className="echarts-container" option={options} /> */}
+      {/* </div> */}
     </div>
   );
 };
 
 export default Graph;
+
+

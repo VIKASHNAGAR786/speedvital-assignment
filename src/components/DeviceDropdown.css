@@ -1,0 +1,80 @@
+/* Centering wrapper */
+.device-dropdown-wrapper {
+    display: flex;
+    justify-content: center;
+    /*align-items: center; /*Center vertically*/
+    /*height: 100vh; /* Full viewport height */
+}
+
+/* Wrapper styling */
+.device-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+.device-dropdown label {
+    font-size: 16px;
+}
+
+/* Select dropdown styling */
+.device-dropdown select {
+    padding: 8px 12px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dropdown hover & focus effect */
+.device-dropdown select:hover,
+.device-dropdown select:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Dark mode styles */
+.dark-mode .device-dropdown {
+    color: #fff;
+    background: #222;
+}
+
+.dark-mode .device-dropdown select {
+    background: #222;
+    color: #fff;
+    border-color: #ffeb3b;
+}
+
+.dark-mode .device-dropdown select:hover,
+.dark-mode .device-dropdown select:focus {
+    border-color: #ffd700;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .device-dropdown-wrapper {
+        height: auto; /* Adjust height */
+        padding: 20px;
+    }
+
+    .device-dropdown {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .device-dropdown select {
+        width: 100%;
+    }
+}

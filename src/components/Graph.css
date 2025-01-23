@@ -1,19 +1,35 @@
-/* Default Light Mode Styles */
+/* Graph Wrapper */
+.graph-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Graph Container */
 .graph-container {
-  background-color: #fff;
-  color: #000;
+  flex: 1;
+  min-width: 48%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.echarts-container {
-  background-color: #fff;
-}
-
-/* Dark Mode Styles */
+/* Dark Mode */
 .dark-mode .graph-container {
-  background-color: #444;
-  color: #fff;
+  background: #222;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-.dark-mode .echarts-container {
-  background-color: #333;
+/* Responsive Layout: Stack graphs on mobile */
+@media screen and (max-width: 768px) {
+  .graph-wrapper {
+      flex-direction: column;
+  }
+
+  .graph-container {
+      min-width: 100%;
+  }
 }
