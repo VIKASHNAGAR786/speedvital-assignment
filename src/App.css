@@ -1,0 +1,159 @@
+/* Default Light Mode Styles */
+html, body {
+  margin: 0;  /* Remove default margins */
+  padding: 0;  /* Remove default padding */
+  width: 100vw;  /* Ensure full width */
+  height: 100vh;  /* Ensure full height */
+  overflow: hidden;  /* Prevent scrolling */
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;  /* Ensures full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f8f9fa;
+  color: #000;
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align it to the top */
+  left: 0; /* Align it to the left */
+  right: 0; /* Align it to the right */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Content Styling */
+.content {
+  width: 100%;  /* Ensures content spans the full width */
+  height: calc(100vh - 60px); /* Adjust to fill the screen (considering navbar height) */
+  padding: 20px; /* Adds padding around content */
+  box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+  text-align: center;
+  margin: 0;
+  overflow: auto; /* Allow scrolling if content overflows */
+  position: relative; /* Ensure it respects the navbar's position */
+  top: 60px; /* Push content down below the fixed navbar */
+}
+
+/* Navbar Links */
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+  background: none;
+  border: 2px solid #000;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  color: #000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .navbar {
+  background-color: #444;
+}
+
+.dark-mode .nav-links a {
+  color: #fff;
+}
+
+.dark-mode .dark-mode-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust Navbar Layout for Mobile */
+  .navbar {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .dark-mode-btn {
+    font-size: 16px;
+    align-self: flex-start;
+  }
+
+  /* Adjusting Graphs Section */
+  .content {
+    padding: 10px;
+    text-align: center;
+    top: 60px; /* Ensure content is below the navbar */
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* For very small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .dark-mode-btn {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  /* Adjust Graph components to be full width */
+  .content {
+    padding: 5px;
+    top: 60px; /* Ensure content is below the navbar */
+  }
+
+  .graph {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,19 @@
+/* Default Light Mode Styles */
+.graph-container {
+  background-color: #fff;
+  color: #000;
+}
+
+.echarts-container {
+  background-color: #fff;
+}
+
+/* Dark Mode Styles */
+.dark-mode .graph-container {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-mode .echarts-container {
+  background-color: #333;
+}
